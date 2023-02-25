@@ -5,15 +5,17 @@ import Contact from './pages/Contact';
 import ErrorRouter from './pages/ErrorRouter';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
+import Restaurant from './pages/Restaurant';
 
 const App = () => {
   return (
     <div>
       <Header />
       <Routes>
-        <Route exact path='/' element={ <Home />} />
-        <Route exact path='/menu' element={<Menu />} />
-        <Route exact path='/contact' element={<Contact />} />
+        <Route path='/' element={ <Home />} />
+        <Route path='/restaurant' element={ <Restaurant />} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='*' element={<ErrorRouter />} />
       </Routes>
     </div>

@@ -4,12 +4,6 @@ import styled from 'styled-components/macro';
 
 const Navigation = () => {
 
-  const addActiveClass = (e) => {
-    e.currentTarget.classList.add('active')
-  }
-
-  
-
   return (
     <Nav>
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -29,9 +23,16 @@ const Navigation = () => {
           </li>
           <li>
           <NavLink
+            to="/restaurant"
+            className="nav-link pb-0 link-warning fs-5" 
+          >
+            Le restaurant
+          </NavLink>
+          </li>
+          <li>
+          <NavLink
             to="/menu"
             className="nav-link pb-0 link-warning fs-5" 
-            onClick={({isActive}) => isActive ? addActiveClass : ''}
           >
             La carte
           </NavLink>
@@ -41,7 +42,7 @@ const Navigation = () => {
             to="/contact"
             className="nav-link pb-0 link-warning fs-5"
           >
-            Nous contacter
+            Contact
           </NavLink>
           </li>
         </ul>
