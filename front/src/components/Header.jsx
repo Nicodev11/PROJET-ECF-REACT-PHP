@@ -1,6 +1,13 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
+
+  let activeStyle = {
+    textDecoration: "underline",
+  };
+  let activeClassName = "underline";
+
   return (
     <div>
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
@@ -12,19 +19,36 @@ const Header = () => {
         </a>
         <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
           <li>
-            <a href="/" className="nav-link px-2 link-secondary">
+            <NavLink to='/' 
+            className="nav-link px-2 link-warning fs-5" 
+            style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }
+            >
               Accueil
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/" className="nav-link px-2 link-dark" spellcheck="false">
-              La carte
-            </a>
+          <NavLink
+            to="/menu"
+            className="nav-link px-2 link-warning fs-5"
+            style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }
+          >
+            La carte
+          </NavLink>
           </li>
           <li>
-            <a href="/" className="nav-link px-2 link-dark" spellcheck="false">
-              Nous contacter
-            </a>
+          <NavLink
+            to="/contact"
+            className="nav-link px-2 link-warning fs-5"
+            style={({ isActive }) =>
+              isActive ? activeStyle : undefined
+            }
+          >
+            Nous contacter
+          </NavLink>
           </li>
         </ul>
         <div className="col-md-3 me-3 text-end">
