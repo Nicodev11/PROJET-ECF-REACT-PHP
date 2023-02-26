@@ -1,5 +1,5 @@
 import React from "react";
-import FormSignUp from "./FormSignUp";
+import FormSignUp from "./form/SignUp";
 
 const ModalReservation = () => {
   return (
@@ -12,7 +12,6 @@ const ModalReservation = () => {
       >
         Reserver une table
       </button>
-
       <div
         className="modal fade"
         id="exampleModal"
@@ -42,7 +41,7 @@ const ModalReservation = () => {
             <div className="modal-footer w-100 text-center">
               <div className="mb-3">
                 <p>
-                  Vous avez dèja un compte ? <a href="/">Identifiez vous !</a>
+                  Vous avez dèja un compte ? <a href="/se-connecter">Identifiez vous !</a>
                 </p>
               </div>
             </div>

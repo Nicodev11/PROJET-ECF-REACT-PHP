@@ -4,13 +4,12 @@ import axios from 'axios'
 
 // Utilisation de react-hook-form pour gerer les données du formulaire
 
-const FormSignUp = () => {
+const SignUp = () => {
   
   const {handleSubmit, register, formState : {errors}} = useForm()
   
   const onSubmit = (data) => {
     console.log(data);
-    data = ""
   }
 
   return (
@@ -87,4 +86,4 @@ const FormSignUp = () => {
   );
 };
 
-export default FormSignUp;
+export default SignUp;
