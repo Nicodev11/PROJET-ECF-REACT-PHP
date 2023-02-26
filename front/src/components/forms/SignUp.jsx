@@ -8,8 +8,12 @@ const SignUp = () => {
   
   const {handleSubmit, register, formState : {errors}} = useForm()
   
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (datas) => {
+    axios({
+      method: 'POST',
+      url : 'http://localhost:8888/api/user/save', 
+      data : datas
+    })
   }
 
   return (

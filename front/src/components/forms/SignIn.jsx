@@ -5,8 +5,7 @@ const SignIn = () => {
 
   const {handleSubmit, register, formState : {errors}} = useForm()
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (datas) => {
   }
 
   return (
