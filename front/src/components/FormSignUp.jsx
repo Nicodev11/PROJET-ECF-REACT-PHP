@@ -1,5 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import axios from 'axios'
+
+// Utilisation de react-hook-form pour gerer les données du formulaire
 
 const FormSignUp = () => {
   
@@ -7,6 +10,7 @@ const FormSignUp = () => {
   
   const onSubmit = (data) => {
     console.log(data);
+    data = ""
   }
 
   return (
