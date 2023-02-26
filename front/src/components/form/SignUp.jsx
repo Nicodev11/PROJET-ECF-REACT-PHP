@@ -29,7 +29,7 @@ const SignUp = () => {
             placeholder="Entrez votre nom"
             {...register('firstname', {required : true})}
             
-          />{errors.firstname && <p>Champs obligatoire</p>}
+          />{errors.firstname && <p className="text-danger">Champs obligatoire</p>}
         </div>
         <div className="mb-3 text-start">
           <label for="lastname" className="form-label">
@@ -41,7 +41,7 @@ const SignUp = () => {
             name="lastname"
             placeholder="Entrez votre prénom"
             {...register('lastname', {required : true})}
-          />{errors.lastname && <p>Champs obligatoire</p>}
+          />{errors.lastname && <p className="text-danger">Champs obligatoire</p>}
         </div>
         <div className="mb-3 text-start">
           <label for="phone" className="form-label">
@@ -53,7 +53,7 @@ const SignUp = () => {
             name="phone"
             placeholder="Entrez votre numéro de téléphone"
             {...register('phone', {required : true})}
-          />{errors.phone && <p>Champs obligatoire</p>}
+          />{errors.phone && <p className="text-danger">Champs obligatoire</p>}
         </div>
         <div className="mb-3 text-start">
           <label for="email" className="form-label">
@@ -65,7 +65,7 @@ const SignUp = () => {
             name="email"
             placeholder="Entrez votre email"
             {...register('email', {required : true, pattern : /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g})}
-          />{errors.email && <p>Adresse email non valide</p>}
+          />{errors.email && <p className="text-danger">Adresse email non valide</p>}
         </div>
         <div className="mb-3 text-start">
           <label for="password" className="form-label">
@@ -75,8 +75,14 @@ const SignUp = () => {
             type="password"
             name="password"
             className="form-control"
-            {...register('password', {required : true})}
-          />{errors.password && <p>Champs obligatoire</p>}
+            {...register('password', {required : true, pattern : /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/g})}
+          />{errors.password && 
+            <p className="text-danger">Votre mot de passe doit contenir au moins 8 caractères dont : 
+              <li>Une majuscule</li>
+              <li>Une minuscule</li>
+              <li>Un chiffre</li>
+              <li>un caractère spécial</li>
+            </p>}
         </div>
         <button type="submit" className="btn btn-warning">
           Continuer
