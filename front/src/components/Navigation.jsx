@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from 'styled-components/macro';
+import ModalReservation from "./ModalReservation";
 
 const Navigation = () => {
 
@@ -47,13 +48,7 @@ const Navigation = () => {
           </li>
         </ul>
         <div className="col-md-3 me-3 text-end">
-          <button
-            type="button"
-            className="btn btn-outline-warning me-2"
-            spellcheck="false"
-          >
-            Reserver une table
-          </button>
+          <ModalReservation />
         </div>
       </header>
     </Nav>
