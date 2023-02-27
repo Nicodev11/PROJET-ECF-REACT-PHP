@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from 'styled-components/macro';
-import ModalReservation from "./ModalReservation";
+import SignUp from "./forms/Register";
 
 const Navigation = () => {
 
@@ -48,7 +48,7 @@ const Navigation = () => {
           </li>
         </ul>
         <div className="col-md-3 me-3 text-end">
-          <ModalReservation />
+          <SignUp />
         </div>
       </header>
     </Nav>

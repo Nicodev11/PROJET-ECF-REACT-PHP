@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-const SignIn = () => {
+const Login = () => {
 
   const {handleSubmit, register, formState : {errors}} = useForm()
 
@@ -23,7 +23,7 @@ const SignIn = () => {
             className="form-control"
             name="email"
             placeholder="Entrez votre email"
-            {...register('email', {required : true, pattern : /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g})}
+            {...register('email', {required : true, pattern : { value : /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i}})}
           />{errors.email && <p>Adresse email non valide</p>}
         </div>
         <div className="mb-3 text-start">
@@ -45,4 +45,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Login;
