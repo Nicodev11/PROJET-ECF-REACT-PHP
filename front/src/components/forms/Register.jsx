@@ -21,12 +21,12 @@ const Register = () => {
     })
     .then((res) => {
       if (res.status === 200) {
-        navigate("/")
+        navigate("/nouvel-utilisateur")
       }
     })
     .catch((errors) => {
       if (errors.response.status === 404) {
-          navigate("/se-connecter");
+        navigate('/se-connecter')
       }
     });
   };
@@ -164,6 +164,7 @@ const Register = () => {
                   Continuer
                 </button>
               </form>
+              
             </div>
             <div className="modal-footer w-100 text-center">
               <div className="mb-3">
